@@ -5,6 +5,6 @@ PhysicsMaterial2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: syototu
-  friction: 0.02
-  bounciness: 0.7
+  m_Name: trampoline
+  friction: 0
+  bounciness: 1.5

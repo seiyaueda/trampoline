@@ -45,11 +45,11 @@ public class LineGenerater : MonoBehaviour {
 	//リアルタイムで描画しない場合
 	void generateLine(){
 		
-		//Instantiate
-		//enabled = false
-		//SetVertexCount = 2
-		//setPositions
-		//enabled = true
+//		Instantiate
+//		enabled = false
+//		SetVertexCount = 2
+//		setPositions
+//		enabled = true
 		
 		
 	}
