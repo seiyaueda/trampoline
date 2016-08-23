@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour {
 	public float jamp;
 	public Rigidbody2D rb;
 	Vector2 jumpVec;
-	int iLife = 5;
+
 
 	// Use this for initialization
 	void Start () {
@@ -23,14 +23,13 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(transform.position.y <= -5){
-			iLife --; 
+			
 			//Debug.Log("Gameover");
 			Destroy(gameObject);
 
 		}
-		if(iLife <= 0){
-			Debug.Log("Gameover");
-		}
+
+
 			
 	
 	}

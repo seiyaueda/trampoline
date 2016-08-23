@@ -20,8 +20,8 @@ public class LineObject : MonoBehaviour {
 		edgeCollider = this.GetComponent<EdgeCollider2D>();
 		
 		isPressed = true;
-
-		Destroy(gameObject, 5.0f);
+		//線の表示秒数
+		Destroy(gameObject, 10.0f);
 	}
 	
 	// Update is called once per frame
