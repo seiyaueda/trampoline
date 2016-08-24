@@ -47,14 +47,14 @@ public class GameManagerScript : MonoBehaviour {
 		if(iLife == 1){
 			Destroy(zanki2);
 		}
-		if(iLife == 0){
-			Destroy(Spawner);
-			Destroy(zanki1);
-			Debug.Log("Gameover");
-			GameoverText.GetComponent<Text>().text = "Gameover";
-			SceneManager.LoadScene ("GameoverScene");
-
-		}
+//		if(iLife == 0){
+//			Destroy(Spawner);
+//			Destroy(zanki1);
+//			Debug.Log("Gameover");
+//			GameoverText.GetComponent<Text>().text = "Gameover";
+//			SceneManager.LoadScene ("GameoverScene");
+//
+//		}
 	}
 }
 	
