@@ -19,4 +19,7 @@ public class ReStart : MonoBehaviour {
 		}
 	
 	}
+	public void ButtonPush () {
+		SceneManager.LoadScene ("Trampoline");
+	}
 }

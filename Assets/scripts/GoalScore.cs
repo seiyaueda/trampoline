@@ -21,11 +21,11 @@ public class GoalScore : MonoBehaviour {
 			goalScore = 0;
 			goalflag = Random.Range (1, 8);
 			if ((goalflag == 1)||(goalflag == 2)){
-				goal.transform.position = new Vector3 (2.6f, -1.5f, -1.0f);
+				goal.transform.position = new Vector3 (2.6f, -2.5f, -1.0f);
 			}else if ((goalflag == 3)||(goalflag == 4)){
 				goal.transform.position = new Vector3 (-2.6f, -1.5f, -1.0f);
 			}else if ((goalflag == 5)||(goalflag == 6)){
-				goal.transform.position = new Vector3 (2.6f, 3.2f, -1.0f);
+				goal.transform.position = new Vector3 (2.6f, 0.5f, -1.0f);
 			}else if (goalflag == 7){
 				goal.transform.position = new Vector3 (-2.6f, -4.0f, -1.0f);
 			} 
@@ -53,4 +53,5 @@ public class GoalScore : MonoBehaviour {
 			Vector3 goalPosition = new Vector3(Random.Range(-2,2), Random.Range(-2,2), 0);
 			Instantiate(goalObject, goalPosition, Quaternion.identity);*/
 	}
+
 }
