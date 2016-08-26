@@ -21,7 +21,7 @@ public class LineObject : MonoBehaviour {
 		
 		isPressed = true;
 		//線の表示秒数
-		Destroy(gameObject, 100.0f);
+		Destroy(gameObject, 15.0f);
 	}
 	
 	// Update is called once per frame

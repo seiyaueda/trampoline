@@ -39,7 +39,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 140046}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7e18413d4401b4e15aeb31b9ad19e3d5, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: -0.49354807, y: 0.07094701}
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d322194a05814da4b917f8bcea5d7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerObject: {fileID: 157822, guid: 6023aca3f79da45a9968692f6be8a2a7, type: 2}
+  goal: {fileID: 0}
   ScoreText: {fileID: 0}
 --- !u!212 &212000010512920056
 SpriteRenderer:

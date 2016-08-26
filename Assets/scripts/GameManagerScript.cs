@@ -14,8 +14,11 @@ public class GameManagerScript : MonoBehaviour {
 	public GameObject zanki5;
 	public GameObject GameoverText;
 	public GameObject Spawner;
+
+	int Thewold = 1;
 	// Use this for initialization
 	void Start () {
+		
 	
 	}
 	
@@ -24,9 +27,17 @@ public class GameManagerScript : MonoBehaviour {
 		playerObjects = GameObject.FindGameObjectsWithTag ("mario");
 		playerNum = playerObjects.Length;
 		//Debug.Log(playerNum);
-			
 
+		if (Thewold == -1){
+			//TheWold = 1;
+			//Debug.Log("stop");
+			Time.timeScale = 0.0F;
+		}else if(Thewold == 1){
+			Time.timeScale = 1.0F;
 		}
+
+	}
+
 	//残機
 	void OnCollisionEnter2D(Collision2D col) {
 		if(col.gameObject.tag == "mario"){
@@ -38,6 +49,7 @@ public class GameManagerScript : MonoBehaviour {
 		if(iLife == 4){
 			Destroy(zanki5);
 		}
+		//ユニティちゃんかわいいいいいいいいいいいいいいいいいい
 		if(iLife == 3){
 			Destroy(zanki4);
 		}
@@ -49,13 +61,22 @@ public class GameManagerScript : MonoBehaviour {
 		}
 //		if(iLife == 0){
 //			Destroy(Spawner);
+////			Time.timeScale = 0.0F;
 //			Destroy(zanki1);
 //			Debug.Log("Gameover");
 //			GameoverText.GetComponent<Text>().text = "Gameover";
 //			SceneManager.LoadScene ("GameoverScene");
 //
 //		}
+
 	}
+
+	public void ButtonPush () {
+		//Time.timeScale = 0.0F;
+		Thewold = Thewold * -1;
+		Debug.Log(Thewold);
+	}
+
 }
 	
 	
