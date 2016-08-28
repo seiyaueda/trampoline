@@ -16,6 +16,7 @@ public class GameManagerScript : MonoBehaviour {
 	public GameObject GameoverText;
 	public GameObject Spawner;
 	public GameObject Button;
+	public GameObject LineController;
 
 	int Thewold = 1;
 	// Use this for initialization
@@ -34,6 +35,7 @@ public class GameManagerScript : MonoBehaviour {
 			//TheWold = 1;
 			//Debug.Log("stop");
 			Time.timeScale = 0.0F;
+			LineController.GetComponent<LineGenerater>().enabled = false;
 		}else if(Thewold == 1){
 			Time.timeScale = 1.0F;
 		}
@@ -61,7 +63,6 @@ public class GameManagerScript : MonoBehaviour {
 			Destroy(zanki2);
 		}
 		if(iLife == 0){	
-//			Destroy(Spawner);
 			Time.timeScale = 0.0F;
 			Thewold = -1;
 			Destroy(zanki1);

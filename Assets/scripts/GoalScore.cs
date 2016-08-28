@@ -24,7 +24,7 @@ public class GoalScore : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (goalScore == 1000){
+		if (goalScore >= 1000){
 			goalScore = 0;
 			goalflag = Random.Range (1, 8);
 			if ((goalflag == 1)||(goalflag == 2)){
