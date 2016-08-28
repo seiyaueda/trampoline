@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
+using UnityStandardAssets.ImageEffects;
 
 public class GameManagerScript : MonoBehaviour {
 	GameObject[] playerObjects;
@@ -14,6 +15,7 @@ public class GameManagerScript : MonoBehaviour {
 	public GameObject zanki5;
 	public GameObject GameoverText;
 	public GameObject Spawner;
+	public GameObject Button;
 
 	int Thewold = 1;
 	// Use this for initialization
@@ -49,7 +51,6 @@ public class GameManagerScript : MonoBehaviour {
 		if(iLife == 4){
 			Destroy(zanki5);
 		}
-		//ユニティちゃんかわいいいいいいいいいいいいいいいいいい
 		if(iLife == 3){
 			Destroy(zanki4);
 		}
@@ -59,15 +60,20 @@ public class GameManagerScript : MonoBehaviour {
 		if(iLife == 1){
 			Destroy(zanki2);
 		}
-//		if(iLife == 0){
+		if(iLife == 0){	
 //			Destroy(Spawner);
-////			Time.timeScale = 0.0F;
-//			Destroy(zanki1);
+			Time.timeScale = 0.0F;
+			Thewold = -1;
+			Destroy(zanki1);
+			GameoverText.GetComponent<Text>().text = "Gameover";
+			Camera.main.GetComponent<Blur>().enabled = true;
+			//Button.SetActive(false);
+			Button.GetComponent<Button>().enabled = false;
+			//Button.GetComponent<Button>().enabled = false;
 //			Debug.Log("Gameover");
-//			GameoverText.GetComponent<Text>().text = "Gameover";
 //			SceneManager.LoadScene ("GameoverScene");
 //
-//		}
+		}
 
 	}
 
@@ -75,6 +81,7 @@ public class GameManagerScript : MonoBehaviour {
 		//Time.timeScale = 0.0F;
 		Thewold = Thewold * -1;
 		Debug.Log(Thewold);
+
 	}
 
 }
