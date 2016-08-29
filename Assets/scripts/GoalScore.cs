@@ -47,7 +47,7 @@ public class GoalScore : MonoBehaviour {
 			goalScore += 100;
 			Debug.Log(score);
 			//ScoreText.text = "Score: " + score.ToString();
-			ScoreText.GetComponent<Text>().text = "Score: " + score.ToString();
+			ScoreText.GetComponent<Text>().text = "YourScore: " + score.ToString();
 			/*Destroy(collision.gameObject);
             Vector3 goalPosition = new Vector3(Random.Range(-2,2), Random.Range(-2,2), 0);
             Instantiate(goalObject, goalPosition, Quaternion.identity);*/
@@ -55,7 +55,7 @@ public class GoalScore : MonoBehaviour {
 			if (score > HighScore) {
 				HighScore = score;
 				PlayerPrefs.SetInt(key, HighScore);
-				HighScoreText.text = "HighScore: " + HighScore.ToString();
+				HighScoreText.text = "HighScore : " + HighScore.ToString();
 				//HighScoreText.GetComponent<Text>().text = "HighScore: " + HighScore.ToString();
 			}
 		}

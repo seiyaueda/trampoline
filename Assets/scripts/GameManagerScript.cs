@@ -17,11 +17,12 @@ public class GameManagerScript : MonoBehaviour {
 	public GameObject Spawner;
 	public GameObject Button;
 	public GameObject LineController;
+	public GameObject ResultCanvas;
 
 	int Thewold = 1;
 	// Use this for initialization
 	void Start () {
-		
+		ResultCanvas.GetComponent<Canvas>().enabled = false;
 	
 	}
 	
@@ -66,10 +67,11 @@ public class GameManagerScript : MonoBehaviour {
 			Time.timeScale = 0.0F;
 			Thewold = -1;
 			Destroy(zanki1);
-			GameoverText.GetComponent<Text>().text = "Gameover";
 			Camera.main.GetComponent<Blur>().enabled = true;
-			//Button.SetActive(false);
 			Button.GetComponent<Button>().enabled = false;
+			ResultCanvas.GetComponent<Canvas>().enabled = true;
+			//Button.SetActive(false);
+			//GameoverText.GetComponent<Text>().text = "Gameover";
 			//Button.GetComponent<Button>().enabled = false;
 //			Debug.Log("Gameover");
 //			SceneManager.LoadScene ("GameoverScene");
