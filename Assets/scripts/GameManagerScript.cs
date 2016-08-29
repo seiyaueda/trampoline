@@ -40,6 +40,7 @@ public class GameManagerScript : MonoBehaviour {
 			LineController.GetComponent<LineGenerater>().enabled = false;
 		}else if(Thewold == 1){
 			Time.timeScale = 1.0F;
+			LineController.GetComponent<LineGenerater>().enabled = true;
 		}
 
 	}
