@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class GoalScore : MonoBehaviour {
+	GameObject[] playerObjects;
 	public GameObject goal;
 	int score;
 	int goalScore;
@@ -24,7 +25,12 @@ public class GoalScore : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		GameObject[] tagobjs = GameObject.FindGameObjectsWithTag("mario");
+
 		if (goalScore >= 1000){
+			foreach (GameObject obj in tagobjs) {
+				Destroy (obj);
+			}
 			goalScore = 0;
 			goalflag = Random.Range (1, 8);
 			if ((goalflag == 1)||(goalflag == 2)){

@@ -23,6 +23,7 @@ public class GameManagerScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		ResultCanvas.GetComponent<Canvas>().enabled = false;
+		Time.timeScale = 1.0F;
 	
 	}
 	
