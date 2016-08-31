@@ -1985,41 +1985,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 12048898, guid: e4fef837f55904413bbfc8f1c0611f87, type: 2}
-      propertyPath: m_Parameters.startWidth
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 12048898, guid: e4fef837f55904413bbfc8f1c0611f87, type: 2}
-      propertyPath: m_Parameters.endWidth
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 12048898, guid: e4fef837f55904413bbfc8f1c0611f87, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 12048898, guid: e4fef837f55904413bbfc8f1c0611f87, type: 2}
-      propertyPath: m_Positions.Array.data[0].x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 12048898, guid: e4fef837f55904413bbfc8f1c0611f87, type: 2}
-      propertyPath: m_Positions.Array.data[0].y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 12048898, guid: e4fef837f55904413bbfc8f1c0611f87, type: 2}
-      propertyPath: m_Positions.Array.data[0].z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 12048898, guid: e4fef837f55904413bbfc8f1c0611f87, type: 2}
-      propertyPath: m_Positions.Array.data[1].x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 117180, guid: e4fef837f55904413bbfc8f1c0611f87, type: 2}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11404106, guid: e4fef837f55904413bbfc8f1c0611f87, type: 2}
-      propertyPath: chalk
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4fef837f55904413bbfc8f1c0611f87, type: 2}
@@ -5410,7 +5378,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:

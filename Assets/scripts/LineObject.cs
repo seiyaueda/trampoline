@@ -17,6 +17,7 @@ public class LineObject : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//chalk = GetComponent<AudioSource>();               //ここと
 		lineRenderer = this.GetComponent<LineRenderer>();
 		lineRenderer.SetVertexCount(2);
 		lineRenderer.enabled = false;
