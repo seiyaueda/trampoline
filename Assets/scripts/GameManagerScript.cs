@@ -48,7 +48,7 @@ public class GameManagerScript : MonoBehaviour {
 	//残機
 	void OnCollisionEnter2D(Collision2D col) {
 		if(col.gameObject.tag == "mario"){
-			iLife --;
+//			iLife --;
 			Destroy(col.gameObject);
 
 		}

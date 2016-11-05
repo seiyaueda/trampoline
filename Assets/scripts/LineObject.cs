@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class LineObject : MonoBehaviour {
+	Vector3 startPressPosition;
 	Vector3 endPressPosition;
 	Vector3 nowPressPosition;
 
@@ -10,6 +11,7 @@ public class LineObject : MonoBehaviour {
 
 	LineRenderer lineRenderer;
 	public bool isPressed;
+	private Renderer rend;
 
 	EdgeCollider2D edgeCollider;
 
@@ -19,8 +21,10 @@ public class LineObject : MonoBehaviour {
 	void Start () {
 		//chalk = GetComponent<AudioSource>();               //ここと
 		lineRenderer = this.GetComponent<LineRenderer>();
+		rend = this.GetComponent<Renderer>();
 		lineRenderer.SetVertexCount(2);
 		lineRenderer.enabled = false;
+		startPressPosition = transform.position;
 		lineRenderer.SetPosition(0,transform.position);
 
 		edgeCollider = this.GetComponent<EdgeCollider2D>();
@@ -42,12 +46,17 @@ public class LineObject : MonoBehaviour {
 			distVector = nowPressPosition - transform.position;
 			float lengthLine = distVector.magnitude;
 
+			float distance =  Vector3.Distance(nowPressPosition,startPressPosition);
+
 			// 線の長さが最大値より大きかったら、線の長さを最大値までの長さにする。
 			if (lengthLine > maxLength) {
 				nowPressPosition = transform.position + maxLength * distVector.normalized;	
 			}
 			lineRenderer.SetPosition(1,nowPressPosition);
+			lineRenderer.material.SetFloat("_RepeatCount",distance);
 			lineRenderer.enabled = true;
+
+			DottedLine();
 
 			Vector2 tempColposition = (Vector2)nowPressPosition - (Vector2)transform.position;
 			edgeCollider.points = new Vector2[] {new Vector2(0, 0), tempColposition};
@@ -61,8 +70,14 @@ public class LineObject : MonoBehaviour {
 			isPressed = false;
 
 		}
-
+			
 
 
 	}
+	void DottedLine(){
+		float distance = Vector3.Distance(nowPressPosition,startPressPosition);
+		rend.material.mainTextureScale = new Vector2(distance, 1);
+	}
+
+
 }
