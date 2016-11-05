@@ -4440,7 +4440,7 @@ GameObject:
   - 61: {fileID: 1619776712}
   - 114: {fileID: 1619776709}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

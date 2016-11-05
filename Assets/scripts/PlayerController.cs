@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
-		jumpVec = new Vector2(/*aa100f,100f*/Random.Range (50f, 130f),Random.Range (70f, 130f));
+		jumpVec = new Vector2(/*aa100f,100f*/Random.Range (/*デフォ50f*/50f, 130f),Random.Range (/*デフォ70f*/70f, 130f));
 
 		rb.AddForce(jumpVec);
 

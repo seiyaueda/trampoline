@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityStandardAssets.ImageEffects;
 
 public class GameManagerScript : MonoBehaviour {
+	const int MAX_LINE_COUNT = 3;
+	public int remainLineCount;
 	GameObject[] playerObjects;
 	int playerNum;
 	int iLife = 5;
@@ -18,10 +20,14 @@ public class GameManagerScript : MonoBehaviour {
 	public GameObject Button;
 	public GameObject LineController;
 	public GameObject ResultCanvas;
+	float maxLength = 3.5f;
+
+
 
 	int Thewold = 1;
 	// Use this for initialization
 	void Start () {
+		remainLineCount = MAX_LINE_COUNT;
 		ResultCanvas.GetComponent<Canvas>().enabled = false;
 		Time.timeScale = 1.0F;
 	
@@ -44,6 +50,19 @@ public class GameManagerScript : MonoBehaviour {
 		}
 
 	}
+
+	public void DecreaseLineCount(){
+		remainLineCount --;
+		Debug.Log(remainLineCount);
+	}
+	public void IncreaseLineCount(){
+		remainLineCount ++;
+		Debug.Log(remainLineCount);
+	}
+//	public void TestDebug(){
+//		Debug.Log("access!");
+//	}
+
 
 	//残機
 	void OnCollisionEnter2D(Collision2D col) {

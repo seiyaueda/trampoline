@@ -9,10 +9,17 @@ public class LineGenerater : MonoBehaviour {
 	Vector3 endPressPosition;
 	
 	public GameObject lineObject;
+
+	GameObject GameManager;
+	GameManagerScript GMScript;
+
 	
 	// Use this for initialization
 	void Start () {
 		isPressed =false;
+		GameManager = GameObject.Find("GameManager");
+		GMScript = GameManager.GetComponent<GameManagerScript>();
+		//GMScript.remainLineCount;
 	}
 	
 	// Update is called once per frame
@@ -20,8 +27,11 @@ public class LineGenerater : MonoBehaviour {
 		if(Input.GetMouseButtonDown(0)){
 			Vector3 tempPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y,9.9f);
 			startPressPosition = Camera.main.ScreenToWorldPoint(tempPosition);
-			Instantiate(lineObject,startPressPosition,Quaternion.identity);
-			
+
+			if(GMScript.remainLineCount > 0){
+				Instantiate(lineObject,startPressPosition,Quaternion.identity);
+				GMScript.DecreaseLineCount();
+			}
 			//Debug.Log(startPressPosition);
 			
 			isPressed = true;

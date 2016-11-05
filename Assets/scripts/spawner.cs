@@ -17,8 +17,8 @@ public class spawner : MonoBehaviour {
 		timer -= Time.deltaTime;
 		if (timer < 0){
 			//playerのスポーン秒数2
-			timer = 0.001f;
-			Vector3 playerPosition = new Vector3(-3.0f, 2.0f, 0.0f);//デフォ・・・-2.5f, 1.8f, 0.0f
+			timer = 0.01f;
+			Vector3 playerPosition = new Vector3(-2.5f, 1.8f, 0.0f);//デフォ・・・-2.5f, 1.8f, 0.0f
 			Instantiate (player, playerPosition, Quaternion.identity);
 		}
 		if(player.transform.position.y <= -5){
